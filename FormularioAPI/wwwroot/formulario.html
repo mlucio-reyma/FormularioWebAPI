@@ -1,0 +1,149 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>📋 Formulario de Registro</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Heroicons (para iconos SVG) -->
+    <script src="https://unpkg.com/feather-icons"></script>
+</head>
+<body class="bg-gray-100 min-h-screen flex flex-col items-center justify-start font-sans">
+    <div class="w-full max-w-xl mt-10 bg-white shadow-lg rounded-lg p-8">
+        <div class="flex items-center mb-6 gap-2">
+            <svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 17v-2a2 2 0 012-2h2a2 2 0 012 2v2m4-10V5a2 2 0 00-2-2H7a2 2 0 00-2 2v2m14 0v12a2 2 0 01-2 2H7a2 2 0 01-2-2V7h16z" /></svg>
+            <h1 class="text-2xl font-bold text-blue-800">Formulario de Registro</h1>
+        </div>
+        <form id="registroForm" class="space-y-4">
+            <div>
+                <label class="block text-sm font-semibold text-gray-700 mb-1" for="fecha">
+                    <span class="inline-flex items-center"><svg class="w-4 h-4 mr-1 text-blue-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M8 7V3m8 4V3m-9 8h10m-10 4h6m2 0h2m-6 4h2m-2-8h.01M21 21H3V7a2 2 0 012-2h14a2 2 0 012 2v14z" /></svg>Fecha</span>
+                </label>
+                <input id="fecha" type="datetime-local" name="Fecha" required class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400" />
+            </div>
+            <div>
+                <label class="block text-sm font-semibold text-gray-700 mb-1" for="persona">
+                    <span class="inline-flex items-center"><svg class="w-4 h-4 mr-1 text-green-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5.121 17.804A9 9 0 0112 15a9 9 0 016.879 2.804M15 11a3 3 0 11-6 0 3 3 0 016 0z" /></svg>Persona</span>
+                </label>
+                <input id="persona" type="text" name="Persona" required class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400" />
+            </div>
+            <div>
+                <label class="block text-sm font-semibold text-gray-700 mb-1" for="linea">
+                    <span class="inline-flex items-center"><svg class="w-4 h-4 mr-1 text-pink-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13 17h8m0 0V9a4 4 0 00-4-4H7a4 4 0 00-4 4v8m16 0a2 2 0 01-2 2H7a2 2 0 01-2-2" /></svg>Linea</span>
+                </label>
+                <input id="linea" type="text" name="Linea" required class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400" />
+            </div>
+            <div>
+                <label class="block text-sm font-semibold text-gray-700 mb-1" for="modelos">
+                    <span class="inline-flex items-center"><svg class="w-4 h-4 mr-1 text-yellow-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M20 21V7a2 2 0 00-2-2h-3.34c-.47 0-.93.2-1.27.55l-6.36 6.36a2 2 0 000 2.83l3.34 3.34a2 2 0 002.83 0l6.36-6.36a2 2 0 00.55-1.27V7a2 2 0 00-2-2H7" /></svg>Modelos</span>
+                </label>
+                <input id="modelos" type="text" name="Modelos" required class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400" />
+            </div>
+            <div class="flex gap-4">
+                <div class="w-1/2">
+                    <label class="block text-sm font-semibold text-gray-700 mb-1" for="cantidad">
+                        <span class="inline-flex items-center"><svg class="w-4 h-4 mr-1 text-indigo-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17 9V7a5 5 0 00-10 0v2a2 2 0 00-2 2v7a2 2 0 002 2h10a2 2 0 002-2v-7a2 2 0 00-2-2z" /></svg>Cantidad</span>
+                    </label>
+                    <input id="cantidad" type="number" name="Cantidad" required class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400" />
+                </div>
+                <div class="w-1/2">
+                    <label class="block text-sm font-semibold text-gray-700 mb-1" for="valor">
+                        <span class="inline-flex items-center"><svg class="w-4 h-4 mr-1 text-orange-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 8c-1.657 0-3 1.343-3 3s1.343 3 3 3 3-1.343 3-3-1.343-3-3-3zm-3 9v1a3 3 0 006 0v-1" /></svg>Valor</span>
+                    </label>
+                    <input id="valor" type="number" name="Valor" step="0.01" required class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400" />
+                </div>
+            </div>
+            <div class="flex items-center">
+                <input id="visible" type="checkbox" name="Visible" class="h-4 w-4 text-blue-600 border-gray-300 rounded focus:ring-blue-400">
+                <label for="visible" class="ml-2 text-sm text-gray-700 font-semibold flex items-center">
+                    <svg class="w-4 h-4 mr-1 text-blue-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0zm7.5 0a9.003 9.003 0 01-15 0 9.003 9.003 0 0115 0z" /></svg>
+                    Visible
+                </label>
+            </div>
+            <button type="submit" class="w-full flex justify-center items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-md shadow mt-2 transition-colors">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
+                Guardar
+            </button>
+        </form>
+        <div id="respuesta" class="text-center text-sm mt-2"></div>
+    </div>
+    <div class="w-full max-w-4xl mt-10 bg-white shadow-lg rounded-lg p-8 mb-10">
+        <div class="flex items-center gap-2 mb-4">
+            <svg class="w-6 h-6 text-green-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V7" /></svg>
+            <h2 class="text-xl font-bold text-green-800">Registros Capturados</h2>
+        </div>
+        <div class="overflow-x-auto">
+            <table class="min-w-full divide-y divide-gray-200" id="tablaRegistros">
+                <thead class="bg-blue-100">
+                    <tr>
+                        <th class="px-3 py-2 text-left text-xs font-semibold text-gray-700 uppercase tracking-wider">Fecha</th>
+                        <th class="px-3 py-2 text-left text-xs font-semibold text-gray-700 uppercase tracking-wider">Persona</th>
+                        <th class="px-3 py-2 text-left text-xs font-semibold text-gray-700 uppercase tracking-wider">Linea</th>
+                        <th class="px-3 py-2 text-left text-xs font-semibold text-gray-700 uppercase tracking-wider">Modelos</th>
+                        <th class="px-3 py-2 text-left text-xs font-semibold text-gray-700 uppercase tracking-wider">Cantidad</th>
+                        <th class="px-3 py-2 text-left text-xs font-semibold text-gray-700 uppercase tracking-wider">Valor</th>
+                        <th class="px-3 py-2 text-left text-xs font-semibold text-gray-700 uppercase tracking-wider">Visible</th>
+                    </tr>
+                </thead>
+                <tbody class="bg-white divide-y divide-gray-100">
+                    <!-- Aquí se insertarán los registros -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <script>async function cargarRegistros() {
+            const res = await fetch('/api/registros');
+            const registros = await res.json();
+            const tbody = document.querySelector('#tablaRegistros tbody');
+            tbody.innerHTML = '';
+            registros.forEach(registro => {
+                const tr = document.createElement('tr');
+                tr.innerHTML = `
+                    <td class="px-3 py-2">${registro.fecha ? new Date(registro.fecha).toLocaleString() : ''}</td>
+                    <td class="px-3 py-2">${registro.persona ?? ''}</td>
+                    <td class="px-3 py-2">${registro.linea ?? ''}</td>
+                    <td class="px-3 py-2">${registro.modelos ?? ''}</td>
+                    <td class="px-3 py-2 text-right">${registro.cantidad ?? ''}</td>
+                    <td class="px-3 py-2 text-right">$${registro.valor?.toFixed(2) ?? ''}</td>
+                    <td class="px-3 py-2 text-center">
+                        ${registro.visible ?
+                            '<svg class="w-5 h-5 mx-auto text-green-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>' :
+                            '<svg class="w-5 h-5 mx-auto text-red-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg>'
+                        }
+                    </td>
+                `;
+                tbody.appendChild(tr);
+            });
+        }
+
+        document.getElementById('registroForm').onsubmit = async function(e) {
+            e.preventDefault();
+            const formData = new FormData(e.target);
+            const data = {
+                Fecha: formData.get("Fecha"),
+                Persona: formData.get("Persona"),
+                Linea: formData.get("Linea"),
+                Modelos: formData.get("Modelos"),
+                Cantidad: parseInt(formData.get("Cantidad")),
+                Valor: parseFloat(formData.get("Valor")),
+                Visible: formData.get("Visible") === "on"
+            };
+            const res = await fetch('/api/registros', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(data)
+            });
+            document.getElementById('respuesta').innerText = res.ok ? "Guardado correctamente 👍" : "Error al guardar 😢";
+            if(res.ok) {
+                e.target.reset();
+                await cargarRegistros();
+            }
+        };
+
+        // Inicializar iconos y cargar los registros al cargar la página
+        window.onload = () => {
+            cargarRegistros();
+            if (window.feather) feather.replace();
+        };</script>
+</body>
+</html>

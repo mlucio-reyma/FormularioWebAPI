@@ -1,0 +1,9 @@
+-Correr en cmd
+docker build -t mi_postgres .
+docker run -d --name postgres_container -p 5432:5432 -v mi_volumen_postgres:/var/lib/postgresql/data mi_postgres
+
+-Eliminar Migrations
+
+-Ejecutar en la Consola de Administracion de Paquetes
+Add-Migration InitialCreate
+Update-Database
