@@ -18,10 +18,10 @@ namespace FormularioAPI.Migrations
                 {
                     Id = table.Column<int>(type: "integer", nullable: false)
                         .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
-                    Fecha = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
-                    Persona = table.Column<string>(type: "text", nullable: false),
-                    Linea = table.Column<string>(type: "text", nullable: false),
-                    Modelos = table.Column<string>(type: "text", nullable: false),
+                    Fecha = table.Column<DateTimeOffset>(type: "timestamp with time zone", nullable: false),
+                    Persona = table.Column<string>(type: "character varying(100)", maxLength: 100, nullable: false),
+                    Linea = table.Column<string>(type: "character varying(50)", maxLength: 50, nullable: false),
+                    Modelos = table.Column<string>(type: "character varying(200)", maxLength: 200, nullable: false),
                     Cantidad = table.Column<int>(type: "integer", nullable: false),
                     Valor = table.Column<decimal>(type: "numeric", nullable: false),
                     Visible = table.Column<bool>(type: "boolean", nullable: false)

@@ -1,22 +1,18 @@
-ï»¿using System;
 using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
 
-namespace FormularioAPI.Models
+namespace FormularioAPI.DTOs
 {
-    public class Registro
+    public class RegistroCreateDto
     {
-        public int Id { get; set; }
-
         [Required(ErrorMessage = "La fecha es obligatoria")]
-        public DateTimeOffset Fecha { get; set; }
+        public string Fecha { get; set; } = string.Empty;
 
         [Required(ErrorMessage = "La persona es obligatoria")]
-        [StringLength(100, ErrorMessage = "El nombre de la persona no puede exceder 100 caracteres")]
+        [StringLength(100, MinimumLength = 2, ErrorMessage = "El nombre debe tener entre 2 y 100 caracteres")]
         public string Persona { get; set; } = string.Empty;
 
-        [Required(ErrorMessage = "La lÃ­nea es obligatoria")]
-        [StringLength(50, ErrorMessage = "La lÃ­nea no puede exceder 50 caracteres")]
+        [Required(ErrorMessage = "La línea es obligatoria")]
+        [StringLength(50, ErrorMessage = "La línea no puede exceder 50 caracteres")]
         public string Linea { get; set; } = string.Empty;
 
         [Required(ErrorMessage = "Los modelos son obligatorios")]
@@ -31,6 +27,18 @@ namespace FormularioAPI.Models
         [Range(0.01, double.MaxValue, ErrorMessage = "El valor debe ser mayor a 0")]
         public decimal Valor { get; set; }
 
+        public bool Visible { get; set; }
+    }
+
+    public class RegistroResponseDto
+    {
+        public int Id { get; set; }
+        public DateTimeOffset Fecha { get; set; }
+        public string Persona { get; set; } = string.Empty;
+        public string Linea { get; set; } = string.Empty;
+        public string Modelos { get; set; } = string.Empty;
+        public int Cantidad { get; set; }
+        public decimal Valor { get; set; }
         public bool Visible { get; set; }
     }
 }
